@@ -1,0 +1,20 @@
+[
+    {
+        "Id": 1,
+        "UserId": 1,
+        "Content": "This is a sample post",
+        "Timestamp": "2024-08-15T12:00:00"
+    },
+    {
+        "Id": 2,
+        "UserId": 2,
+        "Content": "Another post",
+        "Timestamp": "2024-08-16T14:30:00"
+    },
+    {
+        "Id": 3,
+        "UserId": 1,
+        "Content": "A third post",
+        "Timestamp": "2024-08-17T10:00:00"
+    }
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "Id": 1,
+        "Name": "Alice",
+        "FollowedUserIds": [
+            2,
+            3
+        ]
+    },
+    {
+        "Id": 2,
+        "Name": "Bob",
+        "FollowedUserIds": [
+            1
+        ]
+    },
+    {
+        "Id": 3,
+        "Name": "Charlie",
+        "FollowedUserIds": [
+            1,
+            2
+        ]
+    },
+    {
+        "Id": 4,
+        "Name": "Diana",
+        "FollowedUserIds": []
+    },
+    {
+        "Id": 5,
+        "Name": "Eve",
+        "FollowedUserIds": [
+            1,
+            3,
+            4
+        ]
+    }
+]
