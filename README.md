@@ -1,8 +1,15 @@
+# Notify Pubsub
+This project aims to demonstrate the workflow of a publish-subscribe (pub-sub) service in a social media-like application. It showcases how events can be published when a user posts content, and how subscribers (followers) can be notified of these events.
 
-# VNG.SocialNotify
+The pub-sub pattern allows for loose coupling between components, where publishers (in this case, users posting content) don't need to know about their subscribers (followers). This design promotes scalability and flexibility in event-driven architectures.
+
+Key features demonstrated:
+- Publishing posts and triggering events
+- Managing user subscriptions (following/followers)
+
+This simple implementation provides a foundation for understanding how larger-scale pub-sub systems might function in real-world applications.
 
 ## Structure
-
 ------------
 Components:
 
@@ -27,18 +34,7 @@ To run the project, follow these steps:
 
 
 ## Sample flow of the publish post function
-Sure, I can help you with that. The `Publish` method in the `PostService` class is responsible for publishing a post and sending notifications to followers. Here's a breakdown of the flow of the `Publish` method:
-
-1. It first retrieves the post by calling the `GetPostById` method with the provided `id`.
-2. If the post is not found, it throws an exception indicating that the post was not found.
-3. If the post is already published, it throws an exception indicating that the post is already published.
-4. If the post exists and is not published, it sets the `IsPublished` property of the post to `true`.
-5. It retrieves the author of the post by calling the `GetUser` method of the `userService`.
-6. It retrieves the list of followers by calling the `GetListFollower` method of the `userService`.
-7. It creates a list of notifications by selecting each follower and creating a `NotifyToFollower` object with the follower's ID and a message indicating that the author has published a new post.
-8. It publishes each notification by calling the `Publish` method of the `eventPublisher` to trigger the subscribers to receive the notifications.
-
-Here's the code snippet for the `Publish` method:
+Here's the code snippet for the `Publish` method in `PostService`:
 
 ```csharp
 public void Publish(int id)
